@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.2
+%define		kdeappsver	25.08.3
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		akonadi-mime
 Summary:	Akonadi Mime
 Name:		ka6-%{kaname}
-Version:	25.08.2
-Release:	2
+Version:	25.08.3
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	21ff4504ef09120fd86971a723580132
+# Source0-md5:	540adc953bd57e20555dca76db16aa16
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= 5.11.1
@@ -93,13 +93,13 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{kaname}.lang
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libKPim6AkonadiMime.so.*.*
+%{_libdir}/libKPim6AkonadiMime.so.*.*
 %ghost %{_libdir}/libKPim6AkonadiMime.so.6
-%attr(755,root,root) %{_libdir}/qt6/plugins/akonadi_serializer_mail.so
+%{_libdir}/qt6/plugins/akonadi_serializer_mail.so
 %dir %{_libdir}/qt6/qml/org/kde/akonadi/mime
 %{_libdir}/qt6/qml/org/kde/akonadi/mime/akonadi_mime_quick_plugin.qmltypes
 %{_libdir}/qt6/qml/org/kde/akonadi/mime/kde-qmlmodule.version
-%attr(755,root,root) %{_libdir}/qt6/qml/org/kde/akonadi/mime/libakonadi_mime_quick_plugin.so
+%{_libdir}/qt6/qml/org/kde/akonadi/mime/libakonadi_mime_quick_plugin.so
 %{_libdir}/qt6/qml/org/kde/akonadi/mime/qmldir
 %{_datadir}/akonadi/plugins/serializer/akonadi_serializer_mail.desktop
 %{_datadir}/config.kcfg/specialmailcollections.kcfg
