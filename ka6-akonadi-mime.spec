@@ -6,6 +6,7 @@
 %define		qtver		5.15.2
 %define		kaname		akonadi-mime
 Summary:	Akonadi Mime
+Summary(pl.UTF-8):	Akonadi Mime
 Name:		ka6-%{kaname}
 Version:	26.04.1
 Release:	1
@@ -46,6 +47,12 @@ Akonadi Mime is a library that effectively bridges the type-agnostic
 API of the Akonadi client libraries and the domain-specific KMime
 library. It provides jobs, models and other helpers to make working
 with emails through Akonadi easier.
+
+%description -l pl.UTF-8
+Akonadi Mime jest biblioteką, która skutecznie łączy niezależne od
+typu API bibliotek klienckich Akonadi z specyficznym dla domeny
+API biblioteki KMime. Dostarcza jobs, modele i inne ułatwienia, żeby
+pracować z emailami w Akonadi prościej.
 
 %package devel
 Summary:	Header files for %{kaname} development
