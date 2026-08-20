@@ -1,19 +1,19 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	26.04.3
-%define		kframever	5.94.0
+%define		kdeappsver	26.08.0
+%define		kframever	6.29.0
 %define		qtver		5.15.2
 %define		kaname		akonadi-mime
 Summary:	Akonadi Mime
 Summary(pl.UTF-8):	Akonadi Mime
 Name:		ka6-%{kaname}
-Version:	26.04.3
+Version:	26.08.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	13a1acc97f78079a8153e7e0630a76de
+# Source0-md5:	b179100c7e0d3b5c206453f15b68c282
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= 5.11.1
@@ -22,13 +22,13 @@ BuildRequires:	Qt6Widgets-devel
 BuildRequires:	cmake >= 3.20
 BuildRequires:	gettext-devel
 BuildRequires:	ka6-akonadi-devel >= %{kdeappsver}
-BuildRequires:	ka6-kmime-devel >= %{kdeappsver}
 BuildRequires:	kf6-extra-cmake-modules >= %{kframever}
 BuildRequires:	kf6-kconfig-devel >= %{kframever}
 BuildRequires:	kf6-kdbusaddons-devel >= %{kframever}
 BuildRequires:	kf6-ki18n-devel >= %{kframever}
 BuildRequires:	kf6-kio-devel >= %{kframever}
 BuildRequires:	kf6-kitemmodels-devel >= %{kframever}
+BuildRequires:	kf6-kmime-devel >= %{kframever}
 BuildRequires:	kf6-kxmlgui-devel >= %{kframever}
 BuildRequires:	libxslt-devel
 BuildRequires:	libxslt-progs
